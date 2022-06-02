@@ -14,10 +14,12 @@ export const LoggedIn = ()=>{
         <div>
             <button onClick={handleLogin}>Login</button>
             <button onClick={handleLogout}>Logout</button>
-            <div>user is
+            <div>
+                user is
                 { isLoggedIn ? 
                   'logged in' : 
-                  'logged out' }</div>
+                  'logged out' }
+            </div>
         </div>
     )
 }
