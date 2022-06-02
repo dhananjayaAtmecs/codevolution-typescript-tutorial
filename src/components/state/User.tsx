@@ -1,4 +1,3 @@
-import { getMaxListeners } from "process";
 import { useState } from "react";
 
 type AuthUser = {
