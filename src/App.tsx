@@ -8,13 +8,18 @@ import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { User } from './components/context/User';
 import { UserContextProvider } from './components/context/UserContext';
+import { List } from './components/generics/List';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
+import { CustomButton } from './components/html/Button';
 import { Input } from './components/Input';
 import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import { Text } from './components/polymorphic/Text';
+import { RandomNumber } from './components/restriction/RandomNumber';
 import Status from './components/Status';
+import { Toast } from './components/templateLiterals/Toast';
 
 function App() {
 
@@ -86,10 +91,58 @@ function App() {
       </UserContextProvider> */}
       
       
+     {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+
       </>
+      
+      <>
+       {/* <List
+          items={['Batman','Superman','Wonder Women']}
+          onClick={(item)=>console.log(item)}/>
+       
+       <List
+          items={[1,2,3]}
+          onClick={(item)=>console.log(item)}/> */}
 
-     <Private isLoggedIn={true} component={Profile} />
+       {/* <List
+          items={[
+            {
+              id:1,
+              first: 'Bruce',
+              last: 'wayne',
+            },
+            {
+              id:2,
+              first: 'Clark',
+              last: 'Kent',
+            },
+            {
+              id:3,
+              first: 'Princess',
+              last: 'Diana',
+            }
+          ]}
+          onClick={(item)=>console.log(item)}/> */}
+      
 
+      {/* <RandomNumber value={10} isPositive />
+
+      <Toast position='center' />
+
+     
+       
+       <CustomButton 
+            variant='primary' 
+            onClick={()=>console.log('clicked')}>
+           Primary Button
+       </CustomButton> */}
+
+       </>
+
+      <Text as='h1' size='lg'>Heading</Text>
+      <Text as='p' size='md'>Paragraph</Text>
+      <Text as='label' htmlFor='someId' size='sm' color='secondary'>Label</Text>
     </div>
   );
 }
